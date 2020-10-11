@@ -52,7 +52,7 @@ filter(dSeries, Chr %in% 1:22) %>%
 
 #ggplot(nocallCount, aes(x=ng, y=NumNocall)) + geom_jitter() 
 
-annos <- read_tsv("keystone.annos.GC.10.20.100.encodeHighsignal.chromHMM.bed", na=".", col_names=FALSE, progress=FALSE, col_types=cols())
+annos <- read_tsv("keystone.annos.GC.10.20.100.encodeHighsignal.chromHMM.bed.gz", na=".", col_names=FALSE, progress=FALSE, col_types=cols())
 
 colnames(annos) <- c("Chr", "Pos0", "Position", "foo", "GC10", "GC20", "GC100", "EncodeHigh", "ChromState")
 
