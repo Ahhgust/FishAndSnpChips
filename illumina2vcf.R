@@ -122,11 +122,11 @@ combined %>%
             AB,
             BB),
         MaxGeno=case_when(
-            AA==MaxLike ~ "A/A",
-            AB==MaxLike ~ "A/B",
-            BB==MaxLike ~ "B/B",
+            AA==MaxLike ~ "0/0",
+            AB==MaxLike ~ "0/1",
+            BB==MaxLike ~ "1/1",
             TRUE        ~ "?"
-        ))    -> all
+        ))    -> all # TODO: actually two cases; AA can mean ref/ref or alt/alt. Need more info!!
 
 
 all %>%
